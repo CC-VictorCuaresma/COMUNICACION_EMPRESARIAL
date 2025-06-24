@@ -1,134 +1,157 @@
-# 💧 Sistema JASS Digital – Microservicios Distribuidos
+# 💧 Sistema JASS Digital – Plataforma de Gestión Comunitaria
+
+## 📌 Descripción General
+
+El **Sistema JASS Digital** es una solución desarrollada por estudiantes y docentes del CETPRO para mejorar la gestión del servicio de agua potable en comunidades rurales mediante una arquitectura basada en microservicios.
+
+Este proyecto forma parte de una iniciativa de Responsabilidad Social (CSR) para promover la transformación digital en sectores con acceso limitado a la tecnología.
+
+---
 
 ## 🔧 Tech Stack
 
 - **Backend:** Java 17 (Spring Boot, IntelliJ IDEA)
 - **Frontend:** Angular (última versión estable)
-- **Database:** MongoDB (Atlas)
-- **API Docs:** Postman / Swagger
+- **Base de datos:** MongoDB (MongoDB Atlas)
+- **APIs:** OpenAPI / Swagger
 
 ---
 
-## ✅ Project Purpose
+## ✅ Project Objective
 
-Este sistema JASS (Juntas Administradoras de Servicios de Saneamiento) digitaliza la gestión de agua potable en comunidades rurales. Permite gestionar usuarios, pagos, distribución, incidencias y notificaciones de forma eficiente y transparente, usando tecnologías modernas basadas en microservicios.
-
+- Modernize the administration of water boards (JASS).
+- Digitize processes: users, cash registers, payments, distribution, and incidents.
+- Facilitate automated notifications for better communication with users.
+- Empower local operators with current technical tools.
 ---
 
-## 🛠️ Setup Instructions (Imperatives)
+## 🛠️ Instrucciones de Instalación (Imperativas)
 
-### 📦 Clona el repositorio:
+### 1. Clona el repositorio
 
 ```bash
 git clone https://github.com/CC-VictorCuaresma/vg-jass-english.git
-⚙️ Backend (Spring Boot)
-cd vg-jass-english/distribution-microservice
+2. Ejecuta el backend (Spring Boot)
+cd vg-jass-english/ms-distribucion
 ./mvnw spring-boot:run
-🌐 Frontend (Angular)
+Repite este paso para cada microservicio (ms-usuarios, ms-cajas, etc.)
+
+3. Ejecuta el frontend (Angular)
+https://github.com/vallegrande/MS-DISTRIBUCION-AGUA-fr-end
 cd ../frontend
 npm install
 ng serve
 
 
-🧩 How to Use the App (Advice with “should”)
-You should open http://localhost:4200 after both backend and frontend are running.
+🧩 Cómo usar el sistema (Consejos con "should")
+You should abrir http://localhost:4200 luego de iniciar backend y frontend.
+You should registrar un usuario desde la sede correspondiente.
+You should asignar cajas a los usuarios antes de procesar pagos.
+You should verificar la programación de distribución y notificar incidencias.
 
-You should register a user to access the system.
-
-You should assign boxes to users before processing payments.
-
-You should monitor distribution and submit reports for incidents.
-
-
-🎯 Future Plans (Suggestions)
-We should enable Firebase Authentication for better security.
-
-We should integrate dashboards for payment and usage metrics.
-
-We should schedule training sessions for JASS operators each quarter.
-
-We should optimize performance with Redis caching in key services.
-
-
-📁 Repository Structure
+📁 Estructura del Repositorio
 vg-jass-english/
-├── backend/
-│   ├── ms-organizaciones/
-│   ├── ms-usuarios/
-│   ├── ms-cajas/
-│   ├── ms-pagos/
-│   ├── ms-distribucion/
-│   └── ms-notificaciones/
-├── frontend/               # Angular SPA
-├── docs/                   # Architecture, diagrams, DB schemas
-├── README.md               # ← You are here
-└── .env.example            # Env config example
-🧑‍🏫 Contributing (Imperatives & Advice)
-Fork this repository.
+├── ms-organizaciones/    # Gestión de organizaciones y sedes
+├── ms-usuarios/          # Gestión de usuarios del sistema
+├── ms-cajas/             # Asignación y registro de cajas
+├── ms-pagos/             # Pagos, facturación y reclamos
+├── ms-distribucion/      # Distribución del recurso y programación
+├── ms-notificaciones/    # Notificaciones automáticas (SMS/email)
+├── frontend/             # Aplicación Angular
+├── docs/                 # Diagramas, modelos y documentación
+├── .env.example          # Plantilla de variables de entorno
+└── README.md             # ← Este archivo
 
-Create a new feature branch:
+🔄 Colecciones y Relaciones (MongoDB)
 
-git checkout -b feature/nueva-funcionalidad
-Implement and test locally.
+📦 Microservicios y Colecciones
+Microservicio	Colecciones principales
+Organizaciones	organizaciones, sedes
+Usuarios	usuarios
+Cajas	cajas, asignacion_cajas
+Pagos	pagos, facturas, reclamos
+Distribución	zonas, calles, programacion_distribucion, tarifas, incidencias_distribucion
+Notificaciones	notificaciones, plantillas
 
-Open a Pull Request with clear explanation.
+🔗 Relaciones Clave
+organizaciones → sedes → usuarios
 
-You should include "Fixes #<issue>" if it resolves a ticket.
+usuarios ↔ cajas (relación N:M)
 
-🚀 Deployment Requirements (Must & Need To)
-You must configure MongoDB Atlas URI:
+usuarios → pagos → facturas
 
-ini
+pagos → reclamos
+
+sedes → zonas → calles
+
+calles → programacion_distribucion
+
+zonas → tarifas
+
+calles → incidencias_distribucion
+
+usuarios → notificaciones
+
+🧑‍💻 Contribuir al Proyecto (Imperativos y Consejos)
+Forkea este repositorio.
+
+Crea una nueva rama:
+
+git checkout -b feature/nombre-funcionalidad
+
+Implementa, prueba y documenta tu código.
+
+Haz un Pull Request detallado.
+
+You should usar "Fixes #número" si resuelves un issue abierto.
+
+🚀 Requisitos de Despliegue (Must & Need To)
+You must configurar estas variables de entorno:
 
 MONGO_USERNAME=sistemajass
-MONGO_PASSWORD=...
+MONGO_PASSWORD=*****
 MONGO_DATABASE=JASS_DIGITAL
-You need to enable CORS in Spring Boot config.
+JWT_SECRET=clave_super_secreta
+You need to habilitar CORS en la configuración de Spring Boot.
 
-You must build the Angular frontend before deploy:
+You must compilar el frontend antes de desplegar:
 
 npm run build
-Upload /dist/ to your hosting service (Firebase, Netlify, etc.)
+Luego subir /dist/ al servicio de hosting (Firebase, Netlify, etc.)
 
-💡 Best Practices & Tips
-You should follow clean architecture principles.
+💡 Buenas Prácticas
+You should escribir pruebas unitarias (JUnit / Jasmine).
 
-You should document new endpoints in Swagger.
+You should documentar nuevos endpoints en Swagger o /docs.
 
-You should run:
+You should ejecutar:
 
 mvn clean
 npm run lint
-before each commit.
+antes de cada commit.
 
-You should version control the docs/ folder for all diagrams and schemas.
+📚 Documentación Técnica
+Diagrama de entidades: docs/entities.pdf
+Swagger UI: http://localhost:8080/swagger-ui.html
+Manual de usuario: docs/manual-usuario.pdf
+Diagrama de despliegue: docs/infraestructura.png
 
-🔗 Microservices Overview
-Microservice	Collections
-MS-Organizaciones	organizaciones, sedes
-MS-Usuarios	usuarios
-MS-Cajas	cajas, asignacion_cajas
-MS-Pagos	pagos, facturas, reclamos
-MS-Distribución	zonas, calles, programacion_distribucion, tarifas, incidencias_distribucion
-MS-Notificaciones	notificaciones, plantillas
+👨‍🏫 Autores y Responsables
+Módulo	Responsable
+MS-Organizaciones	Milenka Muñoz
+MS-Usuarios	Isael Fatama
+MS-Cajas	Frank Salazar, Deyton Garcia, Santiago Prada
+MS-Pagos	Johan Malasquez, Ronaldinho Ccencho
+MS-Distribución	Equipo de distribución
+MS-Notificaciones	Coordinador general
 
-🔄 Relationships Summary
-organizaciones → sedes → usuarios → cajas, pagos, notificaciones
+📞 Support and Help
+Open an issue in this repository.
+Tag your microservices manager.
 
-zonas → calles, tarifas, programacion_distribucion
+Join the support group on Telegram or Discord for real-time assistance.
 
-pagos → facturas, reclamos
+🙌 Acknowledgments
+Thanks to everyone at Jass de Conta for their support of this project. 💙
 
-calles ↔ incidencias_distribucion
-
-📞 Questions & Support
-If you need help:
-
-Open an Issue in this repository
-
-Tag the microservice owner in the issue (e.g., @milenka-muñoz for MS-Organizaciones)
-
-Join our Discord group for live tech support
-
-✨ Let’s transform local water management with tech.
-✊ Built with purpose, by CETPRO students and professionals.
+✨ “Technology is useful when it improves people's lives.”
