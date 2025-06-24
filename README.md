@@ -1,10 +1,10 @@
-# 💧 Sistema JASS Digital – Plataforma de Gestión Comunitaria
+# 💧 JASS Digital System – Community Management Platform
 
-## 📌 Descripción General
+## 📌 General Description
 
-El **Sistema JASS Digital** es una solución desarrollada por estudiantes y docentes del CETPRO para mejorar la gestión del servicio de agua potable en comunidades rurales mediante una arquitectura basada en microservicios.
+The **JASS Digital System** is a solution developed by CETPRO students and faculty to improve the management of drinking water services in rural communities using a microservices-based architecture.
 
-Este proyecto forma parte de una iniciativa de Responsabilidad Social (CSR) para promover la transformación digital en sectores con acceso limitado a la tecnología.
+This project is part of a Corporate Social Responsibility (CSR) initiative to promote digital transformation in sectors with limited access to technology.
 
 ---
 
@@ -121,11 +121,15 @@ You should use "Fixes #number" if you are resolving an open issue.
 
 ## 🚀 Deployment Requirements (Must & Need To)
 You must configure these environment variables:
-
+```text
 MONGO_USERNAME=JASS_System
+
 MONGO_PASSWORD=*****
+
 MONGO_DATABASE=JASS_DIGITAL
+
 JWT_SECRET=Super_Secret_Key
+```
 You need to enable CORS in your Spring Boot configuration.
 
 You must compile the frontend before deploying:
