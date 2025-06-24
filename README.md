@@ -157,6 +157,7 @@ Manual de usuario: docs/manual-usuario.pdf
 Diagrama de despliegue: docs/infraestructura.png
 
 ## 👨‍🏫 Autores y Responsables
+```text
 Módulo	-  Responsable
 MS-Organizaciones :	Milenka Muñoz
 MS-Usuarios	: Isael Fatama
@@ -164,6 +165,7 @@ MS-Cajas :	Frank Salazar, Deyton Garcia, Santiago Prada
 MS-Pagos	: Johan Malasquez, Ronaldinho Ccencho
 MS-Distribución :	Equipo de distribución
 MS-Notificaciones :	Coordinador general
+```
 
 ## 📞 Support and Help
 Open an issue in this repository.
