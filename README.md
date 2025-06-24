@@ -43,13 +43,13 @@ npm install
 ng serve
 
 
-🧩 Cómo usar el sistema (Consejos con "should")
-You should abrir http://localhost:4200 luego de iniciar backend y frontend.
-You should registrar un usuario desde la sede correspondiente.
-You should asignar cajas a los usuarios antes de procesar pagos.
-You should verificar la programación de distribución y notificar incidencias.
+🧩 How to Use the System (Tips with "should")
+You should open http://localhost:4200 after starting the backend and frontend.
+You should register a user from the corresponding location.
+You should assign registers to users before processing payments.
+You should check the distribution schedule and report issues.
 
-📁 Estructura del Repositorio
+## 📁 Estructura del Repositorio
 vg-jass-english/
 ├── ms-organizaciones/    # Gestión de organizaciones y sedes
 ├── ms-usuarios/          # Gestión de usuarios del sistema
@@ -64,33 +64,27 @@ vg-jass-english/
 
 🔄 Colecciones y Relaciones (MongoDB)
 
-📦 Microservicios y Colecciones
-Microservicio	Colecciones principales
-Organizaciones	organizaciones, sedes
-Usuarios	usuarios
-Cajas	cajas, asignacion_cajas
-Pagos	pagos, facturas, reclamos
-Distribución	zonas, calles, programacion_distribucion, tarifas, incidencias_distribucion
-Notificaciones	notificaciones, plantillas
+📦 Microservices and Collections:
+Main Collections Microservice
+Organizations, locations
+Users
+Boxes, boxes, box assignment
+Payments, invoices, complaints
+Distribution of zones, streets, distribution scheduling, rates, distribution incidents
+Notifications, templates
 
-🔗 Relaciones Clave
-organizaciones → sedes → usuarios
 
-usuarios ↔ cajas (relación N:M)
+🔗 Key Relationships
+Organizations → Locations → Users
+Users ↔ Cashiers (N:M relationship)
+Users → Payments → Invoices
+Payments → Claims
+Locations → Zones → Streets
+Streets → Distribution_Scheduling
+Zones → Rates
+Streets → Distribution_Incidents
+Users → Notifications
 
-usuarios → pagos → facturas
-
-pagos → reclamos
-
-sedes → zonas → calles
-
-calles → programacion_distribucion
-
-zonas → tarifas
-
-calles → incidencias_distribucion
-
-usuarios → notificaciones
 
 🧑‍💻 Contribuir al Proyecto (Imperativos y Consejos)
 Forkea este repositorio.
