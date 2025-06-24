@@ -31,20 +31,23 @@ Este proyecto forma parte de una iniciativa de Responsabilidad Social (CSR) para
 
 ```bash
 git clone https://github.com/CC-VictorCuaresma/vg-jass-english.git
-2. Ejecuta el backend (Spring Boot)
+
 cd vg-jass-english/ms-distribucion
+
 ./mvnw spring-boot:run
+
 Repeat this step for each microservice (ms-users, ms-boxes, etc.)
 ```
 ### 1. Clona el repositorio del FrontEnd
 ```bash
-3. Ejecuta el frontend (Angular)
-https://github.com/vallegrande/MS-DISTRIBUCION-AGUA-fr-end
+git clone https://github.com/vallegrande/MS-DISTRIBUCION-AGUA-fr-end
+
 cd ../frontend
+
 npm install
+
 ng serve
 ```
-
 
 ## 🧩 How to Use the System (Tips with "should")
 
@@ -52,6 +55,7 @@ You should open http://localhost:4200 after starting the backend and frontend.
 You should register a user from the corresponding location.
 You should assign registers to users before processing payments.
 You should check the distribution schedule and report issues.
+
 
 ## 📁 Estructura del Repositorio
 vg-jass-english/
@@ -91,66 +95,68 @@ Streets → Distribution_Incidents
 Users → Notifications
 
 
-🧑‍💻 Contribuir al Proyecto (Imperativos y Consejos)
-Forkea este repositorio.
+## 🧑‍💻 Contribute to the Project (Imperatives and Advice)
+Fork this repository.
 
-Crea una nueva rama:
+Create a new branch:
 
-git checkout -b feature/nombre-funcionalidad
+git checkout -b feature/feature-name
 
-Implementa, prueba y documenta tu código.
+Deploy, test, and document your code.
 
-Haz un Pull Request detallado.
+Make a detailed Pull Request.
 
-You should usar "Fixes #número" si resuelves un issue abierto.
+You should use "Fixes #number" if you are resolving an open issue.
 
-🚀 Requisitos de Despliegue (Must & Need To)
-You must configurar estas variables de entorno:
+## 🚀 Deployment Requirements (Must & Need To)
+You must configure these environment variables:
 
-MONGO_USERNAME=sistemajass
+MONGO_USERNAME=JASS_System
 MONGO_PASSWORD=*****
 MONGO_DATABASE=JASS_DIGITAL
-JWT_SECRET=clave_super_secreta
-You need to habilitar CORS en la configuración de Spring Boot.
+JWT_SECRET=Super_Secret_Key
+You need to enable CORS in your Spring Boot configuration.
 
-You must compilar el frontend antes de desplegar:
+You must compile the frontend before deploying:
 
 npm run build
-Luego subir /dist/ al servicio de hosting (Firebase, Netlify, etc.)
 
-💡 Buenas Prácticas
-You should escribir pruebas unitarias (JUnit / Jasmine).
 
-You should documentar nuevos endpoints en Swagger o /docs.
+## 💡 Best Practices
+You should write unit tests (JUnit / Jasmine).
 
-You should ejecutar:
+You should document new endpoints in Swagger or /docs.
 
+You should run:
+-------------------------------------------------
 mvn clean
 npm run lint
-antes de cada commit.
 
-📚 Documentación Técnica
+## 📚 Documentación Técnica
 Diagrama de entidades: docs/entities.pdf
+
 Swagger UI: http://localhost:8080/swagger-ui.html
+
 Manual de usuario: docs/manual-usuario.pdf
+
 Diagrama de despliegue: docs/infraestructura.png
 
-👨‍🏫 Autores y Responsables
-Módulo	Responsable
-MS-Organizaciones	Milenka Muñoz
-MS-Usuarios	Isael Fatama
-MS-Cajas	Frank Salazar, Deyton Garcia, Santiago Prada
-MS-Pagos	Johan Malasquez, Ronaldinho Ccencho
-MS-Distribución	Equipo de distribución
-MS-Notificaciones	Coordinador general
+## 👨‍🏫 Autores y Responsables
+Módulo	-  Responsable
+MS-Organizaciones :	Milenka Muñoz
+MS-Usuarios	: Isael Fatama
+MS-Cajas :	Frank Salazar, Deyton Garcia, Santiago Prada
+MS-Pagos	: Johan Malasquez, Ronaldinho Ccencho
+MS-Distribución :	Equipo de distribución
+MS-Notificaciones :	Coordinador general
 
-📞 Support and Help
+## 📞 Support and Help
 Open an issue in this repository.
 Tag your microservices manager.
 
 Join the support group on Telegram or Discord for real-time assistance.
 
-🙌 Acknowledgments
+## 🙌 Acknowledgments
 Thanks to everyone at Jass de Conta for their support of this project. 💙
 
 ✨ “Technology is useful when it improves people's lives.”
