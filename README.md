@@ -51,10 +51,10 @@ ng serve
 
 ## 🧩 How to Use the System (Tips with "should")
 
-You should open http://localhost:4200 after starting the backend and frontend.
-You should register a user from the corresponding location.
-You should assign registers to users before processing payments.
-You should check the distribution schedule and report issues.
+- You should open http://localhost:4200 after starting the backend and frontend.
+- You should register a user from the corresponding location.
+- You should assign registers to users before processing payments.
+- You should check the distribution schedule and report issues.
 
 
 ## 📁 Estructura del Repositorio
@@ -76,13 +76,13 @@ vg-jass-english/
 ## 🔄 Colecciones y Relaciones (MongoDB)
 
 📦 Microservices and Collections:
-Main Collections Microservice
-Organizations, locations
-Users
-Boxes, boxes, box assignment
-Payments, invoices, complaints
-Distribution of zones, streets, distribution scheduling, rates, distribution incidents
-Notifications, templates
+- Main Collections Microservice
+- Organizations, locations
+- Users
+- Boxes, boxes, box assignment
+- Payments, invoices, complaints
+- Distribution of zones, streets, distribution scheduling, rates, distribution incidents
+- Notifications, templates
 
 
 ## 🔗 Key Relationships
