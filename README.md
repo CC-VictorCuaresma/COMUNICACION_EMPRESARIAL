@@ -27,23 +27,27 @@ Este proyecto forma parte de una iniciativa de Responsabilidad Social (CSR) para
 
 ## 🛠️ Instrucciones de Instalación (Imperativas)
 
-### 1. Clona el repositorio
+### 1. Clona el repositorio del Backend
 
 ```bash
 git clone https://github.com/CC-VictorCuaresma/vg-jass-english.git
 2. Ejecuta el backend (Spring Boot)
 cd vg-jass-english/ms-distribucion
 ./mvnw spring-boot:run
-Repite este paso para cada microservicio (ms-usuarios, ms-cajas, etc.)
-
+Repeat this step for each microservice (ms-users, ms-boxes, etc.)
+```
+### 1. Clona el repositorio del FrontEnd
+```bash
 3. Ejecuta el frontend (Angular)
 https://github.com/vallegrande/MS-DISTRIBUCION-AGUA-fr-end
 cd ../frontend
 npm install
 ng serve
+```
 
 
-🧩 How to Use the System (Tips with "should")
+## 🧩 How to Use the System (Tips with "should")
+
 You should open http://localhost:4200 after starting the backend and frontend.
 You should register a user from the corresponding location.
 You should assign registers to users before processing payments.
@@ -62,7 +66,8 @@ vg-jass-english/
 ├── .env.example          # Plantilla de variables de entorno
 └── README.md             # ← Este archivo
 
-🔄 Colecciones y Relaciones (MongoDB)
+
+## 🔄 Colecciones y Relaciones (MongoDB)
 
 📦 Microservices and Collections:
 Main Collections Microservice
@@ -74,7 +79,7 @@ Distribution of zones, streets, distribution scheduling, rates, distribution inc
 Notifications, templates
 
 
-🔗 Key Relationships
+## 🔗 Key Relationships
 Organizations → Locations → Users
 Users ↔ Cashiers (N:M relationship)
 Users → Payments → Invoices
