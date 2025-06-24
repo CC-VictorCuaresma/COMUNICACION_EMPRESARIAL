@@ -109,11 +109,11 @@ Users → Notifications
 ## 🧑‍💻 Contribute to the Project (Imperatives and Advice)
 Fork this repository.
 
-Create a new branch:
-
+- Create a new branch:
+```bash
 git checkout -b feature/feature-name
-
-Deploy, test, and document your code.
+```
+- Deploy, test, and document your code.
 
 Make a detailed Pull Request.
 
@@ -144,8 +144,8 @@ You should document new endpoints in Swagger or /docs.
 
 You should run:
 -------------------------------------------------
-mvn clean
-npm run lint
+- mvn clean
+- npm run lint
 
 ## 📚 Documentación Técnica
 Diagrama de entidades: docs/entities.pdf
