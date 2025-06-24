@@ -58,6 +58,8 @@ You should check the distribution schedule and report issues.
 
 
 ## 📁 Estructura del Repositorio
+
+```text
 vg-jass-english/
 ├── ms-organizaciones/    # Gestión de organizaciones y sedes
 ├── ms-usuarios/          # Gestión de usuarios del sistema
@@ -69,7 +71,7 @@ vg-jass-english/
 ├── docs/                 # Diagramas, modelos y documentación
 ├── .env.example          # Plantilla de variables de entorno
 └── README.md             # ← Este archivo
-
+```
 
 ## 🔄 Colecciones y Relaciones (MongoDB)
 
@@ -84,16 +86,25 @@ Notifications, templates
 
 
 ## 🔗 Key Relationships
+```text
 Organizations → Locations → Users
-Users ↔ Cashiers (N:M relationship)
-Users → Payments → Invoices
-Payments → Claims
-Locations → Zones → Streets
-Streets → Distribution_Scheduling
-Zones → Rates
-Streets → Distribution_Incidents
-Users → Notifications
 
+Users ↔ Cashiers (N:M relationship)
+
+Users → Payments → Invoices
+
+Payments → Claims
+
+Locations → Zones → Streets
+
+Streets → Distribution_Scheduling
+
+Zones → Rates
+
+Streets → Distribution_Incidents
+
+Users → Notifications
+```
 
 ## 🧑‍💻 Contribute to the Project (Imperatives and Advice)
 Fork this repository.
