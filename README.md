@@ -25,9 +25,9 @@ This project is part of a Corporate Social Responsibility (CSR) initiative to pr
 - Empower local operators with current technical tools.
 ---
 
-## 🛠️ Instrucciones de Instalación (Imperativas)
+## 🛠️ Installation Instructions (Imperative)
 
-### 1. Clona el repositorio del Backend
+### 1. Clone the Backend repository
 
 ```bash
 git clone https://github.com/CC-VictorCuaresma/vg-jass-english.git
@@ -38,7 +38,7 @@ cd vg-jass-english/ms-distribucion
 
 Repeat this step for each microservice (ms-users, ms-boxes, etc.)
 ```
-### 1. Clona el repositorio del FrontEnd
+### 1. Clone the FrontEnd repository
 ```bash
 git clone https://github.com/vallegrande/MS-DISTRIBUCION-AGUA-fr-end
 
@@ -57,7 +57,7 @@ ng serve
 - You should check the distribution schedule and report issues.
 
 
-## 📁 Estructura del Repositorio
+## 📁 Repository Structure
 
 ```text
 vg-jass-english/
@@ -73,7 +73,7 @@ vg-jass-english/
 └── README.md             # ← Este archivo
 ```
 
-## 🔄 Colecciones y Relaciones (MongoDB)
+## 🔄 Collections and Relationships (MongoDB)
 
 📦 Microservices and Collections:
 - Main Collections Microservice
@@ -147,24 +147,24 @@ You should run:
 - mvn clean
 - npm run lint
 
-## 📚 Documentación Técnica
-Diagrama de entidades: docs/entities.pdf
+## 📚 Technical Documentation
+Entity Diagram: docs/entities.pdf
 
 Swagger UI: http://localhost:8080/swagger-ui.html
 
-Manual de usuario: docs/manual-usuario.pdf
+User Manual: docs/manual-usuario.pdf
 
-Diagrama de despliegue: docs/infraestructura.png
+Deployment Diagram: docs/infraestructura.png
 
-## 👨‍🏫 Autores y Responsables
+## 👨‍🏫 Authors and Managers
 ```text
-Módulo	-  Responsable
-MS-Organizaciones :	Milenka Muñoz
-MS-Usuarios	: Isael Fatama
-MS-Cajas :	Frank Salazar, Deyton Garcia, Santiago Prada
-MS-Pagos	: Johan Malasquez, Ronaldinho Ccencho
-MS-Distribución :	Equipo de distribución
-MS-Notificaciones :	Coordinador general
+Module - Manager
+MS-Organizations: Milenka Muñoz
+MS-Users: Isael Fatama
+MS-Cashiers: Frank Salazar, Deyton Garcia, Santiago Prada
+MS-Payments: Johan Malasquez, Ronaldinho Ccencho
+MS-Distribution: Distribution Team
+MS-Notifications: General Coordinator
 ```
 
 ## 📞 Support and Help
